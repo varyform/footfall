@@ -26,15 +26,7 @@ module Footfall
       db.busy_timeout = 2_000
       db.execute("PRAGMA journal_mode = WAL")
       db.execute_batch(SCHEMA)
-      upgrade(db)
       db
-    end
-
-    # The counter Footfall was extracted from also kept each page view's language, a column
-    # that inserts without it would fail on.
-    def self.upgrade(db)
-      columns = db.execute("PRAGMA table_info(views)").map { |column| column[1] }
-      db.execute("ALTER TABLE views DROP COLUMN locale") if columns.include?("locale")
     end
   end
 end

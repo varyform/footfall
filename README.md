@@ -93,7 +93,8 @@ Three tables, for queries of your own:
 - `downloads`: `day`, `file`, `visitor`, `count`;
 - `salts`: today's salt only.
 
-Days are in the server's time zone. Visitors are only comparable within a day: count
+Footfall only creates tables that aren't there and never alters existing ones; give it a
+file of its own. Days are in the server's time zone. Visitors are only comparable within a day: count
 `DISTINCT day || visitor` for "visitors, a day each".
 
 ## License
