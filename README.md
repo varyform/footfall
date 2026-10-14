@@ -18,7 +18,7 @@ is what a shop counts at its door: people coming in, not who they are.
 
 ```ruby
 # Gemfile
-gem "footfall", github: "varyform/footfall"
+gem "footfall"
 ```
 
 ## Count

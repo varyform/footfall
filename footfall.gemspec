@@ -16,6 +16,11 @@ Gem::Specification.new do |spec|
   spec.homepage    = "https://github.com/varyform/footfall"
   spec.license     = "MIT"
   spec.required_ruby_version = ">= 3.2"
+  spec.metadata = {
+    "source_code_uri" => "https://github.com/varyform/footfall",
+    "changelog_uri" => "https://github.com/varyform/footfall/blob/main/CHANGELOG.md",
+    "rubygems_mfa_required" => "true"
+  }
 
   spec.files = Dir["lib/**/*", "README.md", "CHANGELOG.md", "LICENSE"]
   spec.require_paths = [ "lib" ]
